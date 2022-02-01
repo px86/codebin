@@ -1,0 +1,9 @@
+#+TITLE: Codebin
+#+AUTHOR: Pushkar Raj
+#+DATE: [2022-01-30 Sun]
+
+A simple hastebin clone created using =Express.js=, =highlight.js= and =MongoDB.=
+
+* Screenshot
+
+[[./screenshot.png]]

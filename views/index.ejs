@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title><%= title %></title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	  rel="stylesheet">
+
+    <link href="style.css" rel="stylesheet" />
+    <link href="nord.css" rel="stylesheet" />
+    <script src="script.js" defer></script>
+  </head>
+  <body <% if (mode === "new") { %>style="overflow:hidden;"<% } %>>
+    <div id="box">
+      <button class="material-icons <% if (mode !== "new") { %>inactive<% } %>"
+	      id="save-btn">save</button>
+      <button class="material-icons <% if (mode === "new") { %>inactive<% } %>"
+	      id="new-btn">post_add</button>
+      <select id="lang"
+	      <% if (mode !== "new") { %>style="display:none;"<% } %>>
+	<option value="plaintext">Plaintext</option>
+	<option value="python">Python</option>
+	<option value="c++">C/C++</option>
+	<option value="kotlin">Kotlin</option>
+	<option value="bash">Bash</option>
+	<option value="css">CSS</option>
+	<option value="html">HTML</option>
+	<option value="javascript">Javascript</option>
+      </select>
+    </div>
+    <% if (mode === "new") { %>
+      <pre id="output" style="display:none"><code></code></pre>
+      <textarea id="input" spellcheck="false"></textarea>
+    <% } %>
+    <% if (mode !== "new") { %>
+      <pre id="output" class="language- <%_ lang %> "><code><%- text %></code></pre>
+      <textarea id="input" style="display:none" spellcheck="false"></textarea>
+    <% } %>
+  </body>
+</html>

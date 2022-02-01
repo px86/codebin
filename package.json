@@ -1,0 +1,24 @@
+{
+  "name": "codebin",
+  "version": "1.0.0",
+  "description": "Dump some source code for sharing.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "npx nodemon -r dotenv/config app.js"
+  },
+  "keywords": [
+    "codebin"
+  ],
+  "author": "Pushkar Raj",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "highlight.js": "^11.4.0",
+    "mongodb": "^4.3.1"
+  },
+  "devDependencies": {
+    "dotenv": "^15.0.0"
+  }
+}

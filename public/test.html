@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Test</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	  rel="stylesheet">
+
+    <link href="style.css" rel="stylesheet" />
+    <link href="nord.css" rel="stylesheet" />
+
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div id="box">
+      <button class="material-icons" id="save-btn">save</button>
+      <button class="material-icons inactive" id="new-btn">post_add</button>
+      <select id="lang" name="language" >
+	<option value="plaintext">Plaintext</option>
+	<option value="python">Python</option>
+	<option value="c++">C/C++</option>
+	<option value="kotlin">Kotlin</option>
+	<option value="bash">Bash</option>
+	<option value="css">CSS</option>
+	<option value="html">HTML</option>
+	<option value="javascript">Javascript</option>
+      </select>
+    </div>
+    <pre id="output" style="display:none"><code></code></pre>
+    <textarea id="input" spellcheck="false"></textarea>
+  </body>
+</html>
