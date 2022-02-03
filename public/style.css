@@ -7,14 +7,14 @@
 :root {
     font-size: 16px;
     --clr-dark: #2e3440;
-    --font-mono: 'Fantanque Sans Mono', monospace;
+    --font-mono: 'Fantasque Sans Mono';
 }
 
 body {
     min-height: 100vh;
-    background: var(--clr-dark);
+    background: var(--clr-dark, #2e3440);
     color: #ffffff;
-    font-family: var(--font-mono);
+    font-family: var(--font-mono, 'Fantasque Sans Mono');
 }
 
 #box {
@@ -39,10 +39,10 @@ body {
     padding: .8em;
     color: #ffffff;
     background: inherit;
-    font-family: var(--font-mono);
+    font-family: inherit;
 }
 
-pre {
+pre, code {
     font: inherit;
 }
 
@@ -85,6 +85,6 @@ select:hover, button:hover {
     cursor: default;
 }
 
-.loading {
-    cursor: progress;
+.loading * {
+    cursor: progress !important;
 }
