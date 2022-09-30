@@ -2,10 +2,10 @@
   "name": "codebin",
   "version": "1.0.0",
   "description": "Dump some source code for sharing.",
-  "main": "app.js",
+  "main": "src/app.js",
   "scripts": {
-    "start": "node app.js",
-    "dev": "npx nodemon -r dotenv/config app.js"
+    "start": "node src/app.js",
+    "dev": "npx nodemon -r dotenv/config src/app.js"
   },
   "keywords": [
     "codebin"
