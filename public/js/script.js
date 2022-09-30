@@ -16,10 +16,10 @@ if (newBtn && !newBtn.classList.contains('inactive')) {
 async function save() {
   try {
     document.body.classList.add('loading');
-    const src = srcInput.value;
+    const raw = srcInput.value;
     const lang = langInput.value;
-    if (src && lang) {
-      const res = await postData('/save', { src, lang });
+    if (raw && lang) {
+      const res = await postData('/save', { raw, lang });
       displayResult(res);
       changePageUrl(res.id);
       saveBtn.removeEventListener('click', save);
@@ -57,7 +57,7 @@ function displayResult(result) {
   srcInput.style.display = 'none';
   lang.style.display = 'none';
   textOutput.firstChild.classList.add('language-' + result.lang);
-  textOutput.firstChild.innerHTML = result.text;
+  textOutput.firstChild.innerHTML = result.hltext;
   textOutput.style.display = 'block';
   saveBtn.classList.add('inactive');
   newBtn.classList.remove('inactive');
